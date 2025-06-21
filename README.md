@@ -1,5 +1,5 @@
 # agentic_ai
-Agentic AI is a repository for creating multimodal agents and multi-agent workflows using the Phidata framework. These agents are designed to handle various tasks by leveraging predefined tools, advanced models, and efficient workflows.
+Agentic AI is a repository for creating multimodal agents and multi-agent workflows using the Phidata, CrewAI, Langchain framework. These agents are designed to handle various tasks by leveraging predefined tools, advanced models, and efficient workflows.
 
 
 # 🧠 Retrieval-Augmented Generation (RAG) Projects
