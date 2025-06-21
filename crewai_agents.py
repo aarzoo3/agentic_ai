@@ -127,31 +127,19 @@ decision_maker_task = Task(
     agent=decision_maker_agent
 )
 
-# crew = Crew(
-#      agents=[query_check_agent, internet_search_agent, pdf_reader_agent, decision_maker_agent],
-#      tasks=[query_check_task, internet_search_task, pdf_reader_task, decision_maker_task],
-# )
 crew = Crew(
-     agents=[query_check_agent, internet_search_agent, decision_maker_agent],
-     tasks=[query_check_task, internet_search_task, decision_maker_task],
+     agents=[query_check_agent, internet_search_agent, pdf_reader_agent, decision_maker_agent],
+     tasks=[query_check_task, internet_search_task, pdf_reader_task, decision_maker_task],
 )
 
-# result = crew.kickoff(
-#         inputs={"question":query})
-# print(result)
+
+result = crew.kickoff(
+        inputs={"question":query})
+print(result)
 
 
-#def timetaken(func):
- #   @wraps(func)
-  #  def wrapper(*args):
-   #     start = time.time()
-    #    results = func(*args)
-     ##  print("time taken ->", end-start)
-       # return results
-   # return wrapper
+## FAST API ->
 
-#class QueryRequest(BaseModel):
-    # query:str
 
 # @app.post("/questions")
 # def get_result(que:str):
@@ -163,11 +151,11 @@ crew = Crew(
 
 
 
-
-if query:
-    st.write("Thinking... 💭")
-    # Call your agent
-    result = crew.kickoff(inputs={"question": query})
-    st.markdown("### Response:")
-    st.write(result)
+## Streamlit ->
+# if query:
+#     st.write("Thinking... 💭")
+#     # Call your agent
+#     result = crew.kickoff(inputs={"question": query})
+#     st.markdown("### Response:")
+#     st.write(result)
 
